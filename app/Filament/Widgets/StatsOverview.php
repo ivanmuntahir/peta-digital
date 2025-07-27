@@ -11,9 +11,21 @@ class StatsOverview extends BaseWidget
 {
     protected function getStats(): array
     {
-        // Ambil data dari tabel Places berdasarkan kolom 'fungsi_jalan'
-        $totalJalanLingkungan = Place::where('fungsi', '4')->count();
-        $totalJalanKabupaten = Place::where('category_id', '2')->count();
+        $jalanLingkunganCategory = Category::where('name', 'Jalan Lingkungan')->first();
+        $jalanKabupatenCategory = Category::where('name', 'Jalan Kabupaten')->first();
+
+        $totalJalanLingkungan = 0;
+        if ($jalanLingkunganCategory) {
+            // Diasumsikan 'fungsi' adalah kolom di tabel Place yang berelasi dengan kategori
+            $totalJalanLingkungan = Place::where('fungsi', $jalanLingkunganCategory->id)->count();
+            // ATAU jika 'fungsi' adalah kolom tersendiri di Place dan Category memiliki kolom 'fungsi_code'
+            // $totalJalanLingkungan = Place::where('fungsi', $jalanLingkunganCategory->fungsi_code)->count();
+        }
+
+        $totalJalanKabupaten = 0;
+        if ($jalanKabupatenCategory) {
+            $totalJalanKabupaten = Place::where('category_id', $jalanKabupatenCategory->id)->count();
+        }
 
         return [
             Stat::make('Jalan Lingkungan', $totalJalanLingkungan)
