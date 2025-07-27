@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('admin')
+            ->id('petadigital')
             ->path('petadigital')
             ->login()
             ->colors([
