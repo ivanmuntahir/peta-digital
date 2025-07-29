@@ -160,11 +160,11 @@ class PlaceResource extends Resource
                     ->label('Nama Jalan') // Menambahkan label
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('kecamatan_id.name')
+                TextColumn::make('kecamatan.name')
                     ->label('Kecamatan') // Menambahkan label
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('kelurahan_id.name')
+                TextColumn::make('kelurahan.name')
                     ->label('Kelurahan') // Menambahkan label
                     ->searchable()
                     ->sortable(),
