@@ -15,6 +15,8 @@ class ListUsers extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            ->label('Tambah Pengguna')
+            ->color('success'),
         ];
     }
 }
