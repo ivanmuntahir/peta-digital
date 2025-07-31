@@ -19,7 +19,6 @@ class Place extends Model
         'tipe',
         'kecamatan_id',
         'kelurahan_id',
-        'fungsi',
         'user_id'
     ];
 
