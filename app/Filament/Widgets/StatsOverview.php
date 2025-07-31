@@ -12,7 +12,7 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $jalanLingkunganCategory = Category::where('name', 'Jalan Lingkungan')->first();
-        $jalanKabupatenCategory = Category::where('name', 'Jalan Kabupaten')->first();
+        // $jalanKabupatenCategory = Category::where('name', 'Jalan Kabupaten')->first();
 
         $totalJalanLingkungan = 0;
         if ($jalanLingkunganCategory) {
@@ -22,10 +22,10 @@ class StatsOverview extends BaseWidget
             // $totalJalanLingkungan = Place::where('fungsi', $jalanLingkunganCategory->fungsi_code)->count();
         }
 
-        $totalJalanKabupaten = 0;
-        if ($jalanKabupatenCategory) {
-            $totalJalanKabupaten = Place::where('category_id', $jalanKabupatenCategory->id)->count();
-        }
+        // $totalJalanKabupaten = 0;
+        // if ($jalanKabupatenCategory) {
+        //     $totalJalanKabupaten = Place::where('category_id', $jalanKabupatenCategory->id)->count();
+        // }
 
         return [
             Stat::make('Jalan Lingkungan', $totalJalanLingkungan)
@@ -39,10 +39,10 @@ class StatsOverview extends BaseWidget
             //     ->color('info'),
 
 
-            Stat::make('Jalan Kabupaten', $totalJalanKabupaten)
-                ->description('Total segmen jalan kabupaten')
-                ->descriptionIcon('heroicon-s-map')
-                ->color('info'),
+            // Stat::make('Jalan Kabupaten', $totalJalanKabupaten)
+            //     ->description('Total segmen jalan kabupaten')
+            //     ->descriptionIcon('heroicon-s-map')
+            //     ->color('info'),
 
             // // Anda bisa menambahkan statistik lain, contoh:
             // Stat::make('Total Titik Peta', $totalPlaces)
