@@ -48,14 +48,14 @@ class PlaceResource extends Resource
                             ->label('Nama Lokasi/Jalan')
                             ->required()
                             ->maxLength(255),
-                        Select::make('fungsi')
-                            ->label('Fungsi')
-                            ->relationship('category', 'name')
-                            ->searchable()
-                            ->preload()
-                            ->required(),
+                        // Select::make('fungsi')
+                        //     ->label('Fungsi')
+                        //     ->relationship('category', 'name')
+                        //     ->searchable()
+                        //     ->preload()
+                        //     ->required(),
                         Select::make('category_id')
-                            ->label('Kategori')
+                            ->label('Fungsi')
                             ->relationship('category', 'name')
                             ->searchable()
                             ->preload()
@@ -193,14 +193,13 @@ class PlaceResource extends Resource
                     ->searchable(), // Bisa dicari berdasarkan nilai array
                     // ->sortable(), // Sorting pada kolom JSON array tidak selalu intuitif, bisa dihapus jika bermasalah
 
-                TextColumn::make('functionCategory.name')
-                    ->label('Fungsi')
-                    ->searchable()
-                    ->sortable(),
+                // TextColumn::make('functionCategory.name')
+                //     ->label('Fungsi')
+                //     ->searchable()
+                //     ->sortable(),
 
-                // PERBAIKAN untuk category.name
-                TextColumn::make('category.name') // HARUSNYA 'category.name' BUKAN 'category_id.name'
-                    ->label('Kategori') // Menambahkan label
+                TextColumn::make('category.name') 
+                    ->label('Fungsi') // Menambahkan label
                     ->searchable() // Ini teks, jadi searchable
                     ->sortable(), // Ini teks, jadi sortable
 
