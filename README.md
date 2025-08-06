@@ -6,84 +6,66 @@ Peta Digital Infrastruktur Jalan
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+Demo Aplikasi
+Anda bisa melihat video demo singkat tentang cara kerja aplikasi ini.
+
+<div align="center">
+<a href="https://drive.google.com/file/d/1rfj8Axyh2T1JzivYqtt947nc8GhbTdnJ/view?usp=sharing">
+</a>
+</div>
+
+Cara menambahkan video demo:
+
+Unggah video demo Anda ke platform seperti YouTube atau Vimeo.
+
+Salin URL video tersebut.
+
+Ubah bagian [URL_VIDEO_DEMO_ANDA] di atas dengan URL video Anda.
+
+Tambahkan gambar thumbnail untuk pratinjau, lalu ganti [URL_GAMBAR_THUMBNAIL_ANDA] dengan URL gambarnya. Jika tidak ada gambar, Anda bisa menghapus tag <img>.
+
 Tentang Proyek
-Proyek ini adalah sebuah aplikasi Peta Digital Infrastruktur Jalan yang dirancang untuk mempermudah visualisasi, pengelolaan, dan pemantauan kondisi jalan secara interaktif. Aplikasi ini memungkinkan pengguna untuk memetakan data infrastruktur jalan, melihat statusnya secara real-time, dan mengelola informasi terkait melalui antarmuka yang intuitif.
+Aplikasi Peta Digital Infrastruktur Jalan adalah platform untuk memvisualisasikan, mengelola, dan memantau data kondisi jalan secara interaktif. Pengguna dapat membuat, membaca, memperbarui, dan menghapus data jalan langsung dari peta.
 
-Fitur Utama
-Visualisasi Peta Interaktif: Menampilkan data infrastruktur jalan di atas peta digital menggunakan OpenStreetMap. Pengguna dapat berinteraksi dengan peta untuk melihat detail setiap titik data.
+Fitur
+Visualisasi Peta: Menampilkan data infrastruktur jalan di atas OpenStreetMap.
 
-Input Data (CRUD): Fitur lengkap untuk membuat (Create), membaca (Read), memperbarui (Update), dan menghapus (Delete) data jalan.
+CRUD Data: Pengelolaan data jalan yang lengkap (tambah, lihat, ubah, hapus).
 
-Pin Marker Location: Menambahkan marker pada peta yang menampilkan detail penting, seperti:
+Marker Interaktif: Menambahkan marker di peta dengan detail seperti gambar, koordinat, status jalan, dan data pembuat.
 
-Gambar terakhir dari lokasi.
+Manajemen Pengguna: Sistem akun untuk mengelola akses.
 
-Titik koordinat (Latitude, Longitude).
+Teknologi
+Framework: Laravel
 
-Status permukaan jalan.
+Frontend: Livewire & Filament
 
-Nama pembuat/pengunggah data.
+Peta: OpenStreetMap
 
-Informasi waktu dan pembuat saat data diperbarui terakhir.
+Database: MySQL
 
-Integrasi Data: Memastikan setiap data yang diinput langsung terintegrasi dan ditampilkan pada visualisasi peta.
-
-Manajemen Akun Pengguna: Sistem autentikasi dan otorisasi untuk mengelola pengguna yang dapat mengakses dan mengelola data.
-
-Tumpukan Teknologi
-Proyek ini dibangun menggunakan kombinasi teknologi modern untuk performa dan kemudahan pengembangan:
-
-Backend: Laravel sebagai kerangka kerja utama.
-
-Frontend: Livewire dan Filament untuk membangun antarmuka pengguna yang dinamis dan efisien.
-
-Database: MySQL untuk penyimpanan data yang terstruktur.
-
-Peta: OpenStreetMap untuk menyediakan basis peta yang gratis dan open source.
-
-Instalasi dan Penggunaan
-Clone repositori ini:
+Cara Instalasi
+Clone Repositori:
 
 Bash
 
 git clone https://github.com/nama-pengguna-anda/peta-digital.git
 cd peta-digital
-Instal dependensi Composer:
+Instalasi & Konfigurasi:
 
 Bash
 
 composer install
-Salin file .env dan konfigurasikan:
-
-Bash
-
 cp .env.example .env
-Buka file .env dan sesuaikan pengaturan database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
-
-Jalankan migrasi database:
-
-Bash
-
+# Konfigurasi .env (database)
 php artisan migrate
-Jalankan aplikasi:
+Jalankan Aplikasi:
 
 Bash
 
 php artisan serve
-Aplikasi akan berjalan di http://127.0.0.1:8000.
-
-Kontribusi
-Kami menyambut kontribusi dari siapa saja. Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
-
-Fork repositori ini.
-
-Buat branch baru (git checkout -b fitur-baru).
-
-Lakukan perubahan dan commit (git commit -am 'Menambahkan fitur baru').
-
-Push ke branch Anda (git push origin fitur-baru).
-
-Buat Pull Request.
+Akses aplikasi di http://127.0.0.1:8000.
 
 Lisensi
 Proyek ini dilisensikan di bawah Lisensi MIT.
