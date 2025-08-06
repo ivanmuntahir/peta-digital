@@ -14,16 +14,6 @@ Anda bisa melihat video demo singkat tentang cara kerja aplikasi ini.
 </a>
 </div>
 
-Cara menambahkan video demo:
-
-Unggah video demo Anda ke platform seperti YouTube atau Vimeo.
-
-Salin URL video tersebut.
-
-Ubah bagian [URL_VIDEO_DEMO_ANDA] di atas dengan URL video Anda.
-
-Tambahkan gambar thumbnail untuk pratinjau, lalu ganti [URL_GAMBAR_THUMBNAIL_ANDA] dengan URL gambarnya. Jika tidak ada gambar, Anda bisa menghapus tag <img>.
-
 Tentang Proyek
 Aplikasi Peta Digital Infrastruktur Jalan adalah platform untuk memvisualisasikan, mengelola, dan memantau data kondisi jalan secara interaktif. Pengguna dapat membuat, membaca, memperbarui, dan menghapus data jalan langsung dari peta.
 
